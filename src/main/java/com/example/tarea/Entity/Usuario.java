@@ -1,6 +1,8 @@
 package com.example.tarea.Entity;
 
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,7 +30,7 @@ public class Usuario {
 	
 	private String password;
 	
-	private int phones ;	
+	private List<String> phones ;	
 	
 	
 	
@@ -59,14 +61,14 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getPhones() {
+	public List<String> getPhones() {
 		return phones;
 	}
-	public void setPhones(int phones) {
+	public void setPhones(List<String> phones) {
 		this.phones = phones;
 	}
 
-	public Usuario(Long id, String name, String emeal, String password, int phones) {
+	public Usuario(Long id, String name, String emeal, String password, List<String> phones) {
 		super();
 		this.id = id;
 		this.name = name;
