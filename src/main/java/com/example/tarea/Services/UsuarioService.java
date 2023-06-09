@@ -22,7 +22,14 @@ public class UsuarioService {
 	
 	public Usuario getUsuarioById(Long id) {
 		Optional<Usuario> optionalUsuario = usuarioRepository.findById(id);
-		return optionalUsuario.get();
+		Usuario theUsuario = null;
+		
+		if(optionalUsuario.isPresent()) {
+			theUsuario = optionalUsuario.get();
+		}else {
+				throw new RuntimeException("No se encuentra registrado el Usuario");
+		}
+		return theUsuario;
 	}
 	
 	public List<Usuario> getAllUsuario(){
