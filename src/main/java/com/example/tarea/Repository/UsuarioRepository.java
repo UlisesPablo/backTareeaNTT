@@ -5,12 +5,12 @@ import org.springframework.stereotype.Repository;
 import com.example.tarea.Entity.Usuario;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository <Usuario, String> {
+public interface UsuarioRepository extends JpaRepository <Usuario, Long> {
 	
-	Usuario findByName(String name);
-	boolean existsByName (String name);
+	//Usuario findById(int id);
+	//boolean existsById (int id);
 	
-	Usuario save(Usuario usuario);
+	//Usuario save(Usuario usuario);
 
 }
 
